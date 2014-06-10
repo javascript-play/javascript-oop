@@ -3,18 +3,17 @@
 * We can use = in switch.
 * Refernce from express.js source code.
 * See: express/lib/request.js
+* Please run this code with nodeunit.
 */
 
 exports.testSwitch = function(test) {
   var name = "Wk";
   switch(name = name.toLowerCase()) {
     case "wk":
-      console.log("work");
+      test.ok("Work");
       break;
     default:
-      console.log("failed");
+      test.failed("No");
   }
-
-  test.ok("= in switch is ok.");
   test.done();
 }
